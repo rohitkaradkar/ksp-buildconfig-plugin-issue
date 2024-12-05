@@ -20,5 +20,9 @@ gradlePlugin {
             id = "sampleapp.android.application"
             implementationClass = "AndroidApplicationPlugin"
         }
+        create("androidLibraryPlugin") {
+            id = "sampleapp.android.library"
+            implementationClass = "AndroidLibraryPlugin"
+        }
     }
 }

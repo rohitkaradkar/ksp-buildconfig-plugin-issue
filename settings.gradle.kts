@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "KSP BuildConfig issue"
 include(":app")
+include(":library")

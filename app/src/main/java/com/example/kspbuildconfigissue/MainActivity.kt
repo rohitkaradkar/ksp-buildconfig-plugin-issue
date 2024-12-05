@@ -14,6 +14,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.kspbuildconfigissue.ui.theme.KSPBuildConfigIssueTheme
+import com.example.library.BuildConfig as LibBuildConfig
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +22,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             KSPBuildConfigIssueTheme {
-                Greeting("API timeout ${BuildConfig.API_TIMEOUT_SECS} seconds")
+                Greeting("Welcome to ${BuildConfig.APP_NAME} at port ${LibBuildConfig.PORT_NO}")
             }
         }
     }
@@ -45,6 +46,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     KSPBuildConfigIssueTheme {
-        Greeting("Timeout in ${BuildConfig.API_TIMEOUT_SECS} seconds")
+        Greeting("App ${BuildConfig.APP_NAME} port ${LibBuildConfig.PORT_NO}")
     }
 }

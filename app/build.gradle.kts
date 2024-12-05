@@ -32,11 +32,11 @@ android {
             dimension = "my-dimension"
             isDefault = true
             applicationIdSuffix = ".staging"
-            buildConfigField("Long", "API_TIMEOUT_SECS", "30L")
+            buildConfigField("String", "APP_NAME", "\"Sunshine Dev\"")
         }
         getByName("prod") {
             dimension = "my-dimension"
-            buildConfigField("Long", "API_TIMEOUT_SECS", "15L")
+            buildConfigField("String", "APP_NAME", "\"Sunshine\"")
         }
     }
 }
@@ -58,4 +58,6 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    implementation(project(":library"))
 }
