@@ -6,4 +6,7 @@ plugins {
     alias(libs.plugins.android.library) apply false
     alias(libs.plugins.sampleapp.android.application) apply false
     alias(libs.plugins.sampleapp.android.library) apply false
+    alias(libs.plugins.sampleapp.android.hilt) apply false
+    alias(libs.plugins.ksp) apply false
+    alias(libs.plugins.dagger.hilt) apply false
 }

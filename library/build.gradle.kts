@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.sampleapp.android.library)
+    alias(libs.plugins.sampleapp.android.hilt)
 }
 
 android {
@@ -21,11 +22,11 @@ android {
     productFlavors {
         getByName("staging") {
             dimension = "my-dimension"
-            buildConfigField("int", "PORT_NO", "21")
+            buildConfigField("int", "PORT_NO", "221")
         }
         getByName("prod") {
             dimension = "my-dimension"
-            buildConfigField("int", "PORT_NO", "31")
+            buildConfigField("int", "PORT_NO", "331")
         }
     }
 }

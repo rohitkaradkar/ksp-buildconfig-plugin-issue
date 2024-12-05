@@ -14,15 +14,23 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.kspbuildconfigissue.ui.theme.KSPBuildConfigIssueTheme
+import com.example.library.ServerConfig
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 import com.example.library.BuildConfig as LibBuildConfig
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var serverConfig: ServerConfig
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             KSPBuildConfigIssueTheme {
-                Greeting("Welcome to ${BuildConfig.APP_NAME} at port ${LibBuildConfig.PORT_NO}")
+                Greeting("Welcome to ${BuildConfig.APP_NAME} at port ${serverConfig.portNo()}")
             }
         }
     }

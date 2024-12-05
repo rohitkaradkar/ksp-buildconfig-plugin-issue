@@ -24,5 +24,9 @@ gradlePlugin {
             id = "sampleapp.android.library"
             implementationClass = "AndroidLibraryPlugin"
         }
+        create("androidHiltPlugin") {
+            id = "sampleapp.android.hilt"
+            implementationClass = "AndroidHiltPlugin"
+        }
     }
 }
